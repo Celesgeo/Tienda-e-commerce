@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
 const morgan = require("morgan");
@@ -58,7 +59,12 @@ app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "..", "uploads")));
 
 app.get("/api/health", (_req, res) => {
-  res.status(200).json({ ok: true, message: "API funcionando" });
+  const dbReady = mongoose.connection.readyState === 1;
+  res.status(200).json({
+    ok: true,
+    message: "API funcionando",
+    db: dbReady ? "connected" : "disconnected",
+  });
 });
 
 app.use("/api/auth", authRoutes);
