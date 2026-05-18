@@ -4,7 +4,7 @@ Frontend ecommerce con tienda publica y panel administrador.
 
 ## Instalacion
 
-1. `cp .env.example .env`
+1. `cp env.template .env`
 2. `npm install`
 3. `npm run dev`
 

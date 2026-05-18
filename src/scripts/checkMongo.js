@@ -19,7 +19,7 @@ const run = async () => {
   const uri = process.env.MONGO_URI;
   if (!uri) {
     // eslint-disable-next-line no-console
-    console.error("❌ No hay MONGO_URI. Copiá .env.example a .env y configurá la URI de Atlas o local.");
+    console.error("❌ No hay MONGO_URI. Copiá env.template a .env y configurá la URI de Atlas o local.");
     process.exit(1);
   }
 
