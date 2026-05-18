@@ -15,6 +15,7 @@ const paymentRoutes = require("./routes/paymentRoutes");
 const storeRoutes = require("./routes/storeRoutes");
 const slideRoutes = require("./routes/slideRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
+const requireDb = require("./middlewares/requireDb");
 
 const app = express();
 
@@ -66,6 +67,8 @@ app.get("/api/health", (_req, res) => {
     db: dbReady ? "connected" : "disconnected",
   });
 });
+
+app.use("/api", requireDb);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoryRoutes);
