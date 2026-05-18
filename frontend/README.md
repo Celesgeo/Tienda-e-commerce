@@ -4,7 +4,7 @@ Frontend ecommerce con tienda publica y panel administrador.
 
 ## Instalacion
 
-1. `cp env.template .env`
+1. Crear `frontend/.env` (no se sube a Git); en producción usar `VITE_API_URL` en Railway.
 2. `npm install`
 3. `npm run dev`
 

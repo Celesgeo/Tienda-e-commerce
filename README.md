@@ -4,8 +4,7 @@ Backend con arquitectura MVC para ecommerce, con JWT, CRUDs, órdenes y Cloudina
 
 ## Instalación
 
-1. Copiar variables de entorno:
-   - `cp env.template .env`
+1. Crear `.env` en la raíz (no se sube a Git) con las variables del panel de hosting o las que uses en local.
 2. Instalar dependencias:
    - `npm install`
 3. Comprobar MongoDB (recomendado):

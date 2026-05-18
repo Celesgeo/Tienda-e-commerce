@@ -7,6 +7,8 @@ uploads
 .env.*
 **/.env
 **/.env.*
+env.template
+**/env.template
 
 npm-debug.log*
 yarn-debug.log*
