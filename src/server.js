@@ -1,0 +1,23 @@
+const loadEnv = require("./config/loadEnv");
+loadEnv();
+
+const app = require("./app");
+const connectDB = require("./config/db");
+
+const PORT = process.env.PORT || 5000;
+
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(PORT, () => {
+      // eslint-disable-next-line no-console
+      console.log(`Servidor corriendo en puerto ${PORT}`);
+    });
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error al iniciar servidor:", error.message);
+    process.exit(1);
+  }
+};
+
+startServer();

@@ -1,0 +1,5 @@
+# Monorepo: backend (raíz) + frontend (carpeta frontend/)
+# En Railway creá 2 servicios desde el mismo repo y configurá Root Directory por servicio.
+
+[build]
+builder = "nixpacks"

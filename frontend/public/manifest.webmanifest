@@ -1,0 +1,16 @@
+{
+  "name": "Tienda Ecommerce",
+  "short_name": "Tienda",
+  "description": "Tienda online profesional con admin panel",
+  "theme_color": "#111111",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
