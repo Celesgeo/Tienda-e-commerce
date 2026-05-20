@@ -1,5 +1,5 @@
-# Backend (raíz del repo). En Railway: Root Directory vacío o "."
-# Creá otro servicio con Root Directory "frontend" y su railway.toml.
+# Solo BACKEND (Root Directory vacío).
+# El servicio frontend debe usar frontend/railway.toml (no este archivo).
 
 [build]
 builder = "nixpacks"
